@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+.cob{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.cbl{
+    width: 40px;
+    height: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 2;
+    overflow: hidden;
+    border-right: rgb(160, 160, 160) 1px solid;
+    transition: all 0.3s ease-out;
+}
+.cbl ul{
+    margin-top: 10px;
+}
+.tap{
+    height: 100%;
+    background-color: #f3f3f3;
+    position: relative;
+    z-index: 1;
+    margin-left: 40px;
+}
+.ts2{
+    display: none;
+    background-color: aliceblue;
+}
+.ts3{
+    display: none;
+    background-color: antiquewhite;
+}
+.logo{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.logo img{
+    width: 40px;
+}
+.logo span{
+    font-size: 20px;
+    margin-top: 14px;
+    width: 75%;
+    float: right;
+    font-weight: 100;
+    letter-spacing: 22px;
+}
+.zk{
+    width: 100%;
+    display: block;
+}
+.zk div{
+    width: 80%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    margin-top: 5px;
+}
+.cbl_btn a{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    background-size: cover;
+    border: 0;
+    margin-top: 10px;
+    color: #313131;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.cbl_btn a svg{
+    width: 40px;
+}
+.cbl_btn a span{
+    height: 100%;
+    width: 65%;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    letter-spacing: 15px;
+}
+.cbl_btn{
+    position: relative;
+    transition: all 0.3s linear;
+}
+.cbl_btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    background-color: rgb(98 98 98 / 16%);
+    height: 100%;
+    transition: all 0.25s linear;
+    z-index: 0;
+}
+.cbl_btn:hover::after{
+    width: 100%;
+}
