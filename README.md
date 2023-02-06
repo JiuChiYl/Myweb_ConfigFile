@@ -7,4 +7,3 @@
 >* config1
 >>* css
  >>* js
-  >>* img
