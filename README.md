@@ -7,4 +7,4 @@
 >* config1
 >>* css
  >>* js
-  >>*HtmlFile
+  >>* HtmlFile
