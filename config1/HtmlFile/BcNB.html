@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bread crumb navigation bar</title>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.cbl {
+			width: 300px;
+			height: 100%;
+			background-color: rgba(59, 158, 24, 0.64);
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			transition: 0.3s all ease-out;
+			overflow: hidden;
+			z-index: 999;
+		}
+
+		.cbl ul {
+			position: absolute;
+			width: 100%;
+		}
+
+		.cbl a {
+			display: block;
+			color: rgba(255, 255, 255, 1.00);
+			text-align: center;
+			text-decoration: none;
+			font-size: 30px;
+			transition: 0.3s all linear;
+		}
+
+		.cbl ul li a:hover {
+			background-color: rgba(164, 255, 150, 1.00);
+		}
+
+		.cbl>a:hover {
+			background-color: #FFF;
+			color: #5B5B5B;
+		}
+
+		.ctab ol {
+			text-align: center;
+			color: rgba(79, 79, 79, 0.58);
+			background-color: rgba(255, 255, 255, 1.00);
+		}
+
+		.ctab {
+			display: none;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration-line: none;
+		}
+
+		.dfo {
+			color: #FFF;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			position: relative;
+			top: 80vh;
+		}
+
+		.logo {
+			padding: 20px;
+		}
+
+		.logo img {
+			width: 100%;
+		}
+
+		ol a {
+			background-color: aquamarine;
+		}
+
+		.mbx {
+			width: 560px;
+			height: 25px;
+			/* background: #fbebcf; */
+			margin-left: 30vw;
+			top: 30px;
+			position: absolute;
+			border-radius: 4px;
+			/* box-shadow: 0px 0px 7px -2px; */
+			overflow: hidden;
+		}
+		.mbx ul>li{
+			float: left;
+		}
+		.mbx ul li a{
+			color: rgb(17, 145, 34);
+		}
+		.csp{
+			display: none;
+    float: right;
+    font-size: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mbx"><ul type="none" class="getl">
+		<li><a href="javascript:;" id="home">Home></a></li>
+	</ul></div>
+	<div class="cbl">
+		<a href="" class="logo"><img src="./image/logo.png" alt=""></a>
+		<a href="javascript:;" id="exit">✖</a>
+		<ul type="none">
+			<li>
+				<a href="javascript:;" id="cjs1">Btn1</a>
+				<div class="ctab" id="ctab1">
+					<ol><a href="javascript:;" class="pfg" id="lab1">frt</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab2">ghs</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab3">aaf</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab4">rty</a></ol>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:;" id="cjs2">Btn2</a>
+				<div class="ctab" id="ctab2">
+					<ol><a href="javascript:;" class="pfg" id="lab5">dfa</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab6">afg</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab7">bns</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab8">xbrf</a></ol>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:;" id="cjs3">Btn3</a>
+				<div class="ctab" id="ctab3">
+					<ol><a href="javascript:;" class="pfg" id="lab9">dsz</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab10">Lassb1</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab11">fre</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab12">vyt</a></ol>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:;" id="cjs4">Btn4</a>
+				<div class="ctab" id="ctab4">
+					<ol><a href="javascript:;" class="pfg" id="lab13">vre</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab14">vvrd</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab15">bd</a></ol>
+					<ol><a href="javascript:;" class="pfg" id="lab16">bre</a></ol>
+				</div>
+			</li>
+		</ul>
+		<div class="dfo"><span>Anoco</span>|<span>2023iGsc</span></div>
+	</div>
+	<div class="csp" id="lab0rp" style="display: block;">000000000000</div>
+	<div class="csp" id="lab1rp">1231231546516341</div>
+	<div class="csp" id="lab2rp">vvvvvvvvvvvv</div>
+	<div class="csp" id="lab3rp">gggggggggggg</div>
+	<div class="csp" id="lab4rp">ffffffffffff</div>
+	<div class="csp" id="lab5rp">65841</div>
+	<div class="csp" id="lab6rp">feWGVgewgsss</div>
+	<div class="csp" id="lab7rp">gwZAEhhtjkt</div>
+	<div class="csp" id="lab8rp">ssssssssjtrjtrjssss</div>
+	<div class="csp" id="lab9rp">jtrjnxjnzsry </div>
+	<div class="csp" id="lab10rp">ehzaehjtyukfy</div>
+	<div class="csp" id="lab11rp">cewgvrehbtntr</div>
+	<div class="csp" id="lab12rp">ehbzsehhbnjy</div>
+	<div class="csp" id="lab13rp">hrehs5546u43yyhjund</div>
+	<div class="csp" id="lab14rp">6ujde5hgbder</div>
+	<div class="csp" id="lab15rp">gredhliol8fsfs</div>
+	<div class="csp" id="lab16rp">rgrgrgrgrry5y5yrhy</div>
+
+	<script>
+		$(".pfg").click(function () {
+			var gettxt = $(this).text();
+			var getid = $(this).attr('id');
+				$(".getl").append("<li class='"+getid+"r bsc' id='"+getid+"r'><a class = 'onk' href='javascript:;'>"+gettxt+"</a>|</li>")
+			$("."+getid+"r").click(function(){
+				$(this).remove();
+				var isd = $(this).attr('id');
+				$(".csp").css("display","none");
+				$("#"+isd+"p").css("display","block");
+			})
+		})
+		$(".pfg").click(function(){
+			var isds = $(this).attr('id')
+			$(".csp").css("display","none")
+			$("#"+isds+"rp").css("display","block")
+		})
+		$("#home").click(function(){
+			$(".bsc").remove();
+			$(".csp").css("display","none");
+			$("#lab0rp").css("display","block");
+		})
+	</script>
+	<script src="leftmenu.js"></script>
+</body>
+
+</html>
