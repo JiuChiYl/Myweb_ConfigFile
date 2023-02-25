@@ -1,5 +1,11 @@
 var $mocc = {
     /////////////////////////金字塔//////////////////////////
+    /*                        说明                         */
+////参数/////////////解释////////////////参数类型////////////
+//  ots_int          显示数量              int             //
+//  show_obj         显示对象              object/text     //
+//  dom_obj          显示位置              object          //
+/////////////////////////////////////////////////////////////
     jzt: function(ots_int,show_obj,dom_obj){
         if(show_obj == ''){
             show_obj = "*";
@@ -15,6 +21,13 @@ var $mocc = {
         }
     },
 /////////////////////////侧边栏//////////////////////////
+/*                        说明                         */
+////参数/////////////解释////////////////参数类型////////
+//  cbl_obj          侧边栏               object       //
+//  wind             宽度(显示时的宽度)   int          //
+//  transitiion      动画速度             text         //
+//  onk              按钮(触发对象)       onclick      //
+/////////////////////////////////////////////////////////
     cbl: function(cbl_obj,wind,transition,onk){
         var i = 0;
         var wid = ["",wind+"px","0px"];
@@ -25,6 +38,12 @@ var $mocc = {
         })
     },
 /////////////////////////查看更多////////////////////////
+/*                        说明                         */
+////参数/////////////解释////////////////参数类型////////
+//  block_obj       需要显示/隐藏的块     object       //
+//  hide_onk        按钮(隐藏)            onclick      //
+//  show_onk        按钮(显示)            onclick      //
+/////////////////////////////////////////////////////////
     xsgd: function(block_obj,hide_onk,show_onk){
         show_onk.click(function(){
             block_obj.css("display","block");
@@ -38,6 +57,15 @@ var $mocc = {
         })
     },
 /////////////////////////倒计时//////////////////////////
+/*                        说明                         */
+////参数/////////////解释////////////////////参数类型////
+//  day             天数                     object    //
+//  hou             时                       object    //
+//  min             分                       object    //
+//  sec             秒                       object    //
+//  newTime         倒计时结束时间           text      //
+//  res_function    倒计时完成后执行的函数   return    //
+////////////////////////////////////////////////////////
     djs: function(day,hou,min,sec,newTime,res_function){
         let newTimes = new Date(newTime);
         function letgoTime(){
@@ -55,15 +83,12 @@ var $mocc = {
                     hou.text(h);
                     min.text(m);
                     sec.text(s);
-                        if(d,h,m,s === 0){
-                            return res_function;
-                            return clearInterval(retime);
+                        if(s == 0&&m == 0&&h == 0&&d == 0){
+                            clearInterval(retime);
+                            return res_function();
                         }
         }
-        // setTimeout(function(){
             letgoTime();
             const retime = setInterval(letgoTime,1000);
-        // },3000)
-        
     }
 }
